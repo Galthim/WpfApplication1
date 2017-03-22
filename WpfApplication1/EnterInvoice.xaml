@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApplication1.EnterInvoice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Enter Invoice" Height="600" Width="800">
+    <Grid Background="Gray">
+        <Label Content="Enter Invoices" HorizontalAlignment="Center" Margin="10,29,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="71,73,0,0" TextWrapping="Wrap" Text="Invoice Number:" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="163,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Margin="66,103,0,0" TextWrapping="Wrap" Text="Customer Name: " VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="163,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <StackPanel HorizontalAlignment="Left" Height="300" Margin="58,189,0,0" VerticalAlignment="Top" Width="113">
+            <TextBox x:Name ="ProductNumber1"  Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber2" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber3" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber4" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber5" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber6" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber7" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber8" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber9" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber10" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber11" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber12" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name ="ProductNumber13" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
