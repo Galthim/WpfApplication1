@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace WpfApplication1
 {
@@ -31,9 +18,17 @@ namespace WpfApplication1
             Password_TextBox.Clear(); 
         }
 
-        
+        private void Submit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //trial run to pass connection information to server
 
-      
-       
+            if (WpfApplication1.ServerConnect.MyConnection(Username_TextBox.Text, Password_TextBox.Text) == true)
+            {
+                MainMenu Connection_Accepted = new MainMenu();
+                Connection_Accepted.Show();
+            }; 
+            
+            
+        }
     }
 }

@@ -17,11 +17,13 @@ namespace WpfApplication1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class EnterInvoice : Page
     {
-        public Window1()
+        public EnterInvoice()
         {
             InitializeComponent();
         }
+
+        
     }
 }
