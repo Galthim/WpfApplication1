@@ -20,7 +20,7 @@
                     <ColumnDefinition Width="38*"/>
                 </Grid.ColumnDefinitions>
                 <TextBox x:Name="Customer_Address_Street" TextWrapping="Wrap" Margin="0,0,33,-29" IsEnabled="False" Grid.ColumnSpan="3"/>
-                <ComboBox x:Name="ComboBox_Invoice" SelectionChanged="ComboBox_Invoice_SelectionChanged" HorizontalAlignment="Left" Height="25" Margin="57,27,0,-29" VerticalAlignment="Top" Width="116" IsDropDownOpen="True" Grid.ColumnSpan="3" Grid.Column="4" />
+                <ComboBox x:Name="ComboBox_Invoice" SelectionChanged="ComboBox_Invoice_SelectionChanged" HorizontalAlignment="Left" Height="25" Margin="57,27,0,-29" VerticalAlignment="Top" Width="116" Grid.ColumnSpan="3" Grid.Column="4" />
             </Grid>
             <Grid Margin="10,50,10,0">
               

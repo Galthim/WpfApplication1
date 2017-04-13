@@ -106,7 +106,7 @@ namespace WpfApplication1
                     ProdInfo[axe, 0] = string.Empty + DataGetter4.GetInt32(0);
                     //Product Name                                
                     ProdInfo[axe, 1] = DataGetter4.GetString(1);
-                   
+
                     axe++;
                 }
                 DataGetter4.Close();
@@ -119,7 +119,7 @@ namespace WpfApplication1
         }
         private void ComboBox_Invoice_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           string ComboGet = string.Empty + ComboBox_Invoice.SelectedItem;
+            string ComboGet = string.Empty + ComboBox_Invoice.SelectedItem;
             for (int x = 0; x < OrderNum.GetLength(0); x++)
             {
                 if (ComboGet.Equals(OrderNum[x, 0]))
@@ -128,15 +128,15 @@ namespace WpfApplication1
                     for (int i = 0; i < CustInfo.GetLength(0); i++)
                     {
                         if (OrderNum[x, 1].Equals(CustInfo[i, 0]))
-                                {
+                        {
                             Customer_Name.Text = CustInfo[i, 1];
-                            Customer_Address_Street.Text = CustInfo[i, 2] + " " + CustInfo[i,3];
-                            
-                                }
+                            Customer_Address_Street.Text = CustInfo[i, 2] + " " + CustInfo[i, 3];
+
+                        }
                     }
 
 
-                    
+
                     for (int f = 0; f < OrderInfo.GetLength(0); f++)
                     {
                         if (ComboGet.Equals(OrderInfo[f, 0]))
@@ -148,10 +148,10 @@ namespace WpfApplication1
                             ProductWindow.Columns.Add("Unit Price");
                             ProductWindow.Columns.Add("Quantity");
                             ProductWindow.Columns.Add("Subtotal");
-                            
-                            
-                            
-                            
+
+
+
+
                             for (int p = 0; p < OrderInfo.GetLength(1); p++)
                             {
                                 DataRow ProductRow = ProductWindow.NewRow();
@@ -160,7 +160,7 @@ namespace WpfApplication1
                                     for (int a = 0; a <= 77; a++)
                                     {
                                         if (OrderInfo[p, 1].Equals(ProdInfo[a, 0]))
-                                            {
+                                        {
                                             //adds only rows that are connected to Invoice number
                                             ProductRow["Product ID"] = OrderInfo[p, 1];
                                             ProductRow["Product Name"] = ProdInfo[a, 1];
@@ -168,32 +168,14 @@ namespace WpfApplication1
                                             ProductRow["Quantity"] = OrderInfo[p, 3];
                                             ProductRow["Subtotal"] = OrderInfo[p, 4];
                                             ProductWindow.Rows.Add(ProductRow);
-                                            }
-                                      }
+                                        }
+                                    }
                                 }
                             }
                             Products.SetBinding(ItemsControl.ItemsSourceProperty, new System.Windows.Data.Binding { Source = ProductWindow });
-                            
-
                         }
-                        }
-                    
-                }
-                else
-                {
-               
+                    }
                 }
             }
-            
-        }
-    }
-
-
-
-
-
-
-      
-
-   
+        } }   
 } 
