@@ -73,33 +73,9 @@ namespace WpfApplication1 {
         #line hidden
         
         
-        #line 23 "..\..\EnterInvoice.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label Prod_Num_LBL;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 24 "..\..\EnterInvoice.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label Prod_Desc_LBL;
-        
-        #line default
-        #line hidden
-        
-        
         #line 25 "..\..\EnterInvoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label Prod_Qty_LBL;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 26 "..\..\EnterInvoice.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label Prod_Cost_LBL;
+        internal System.Windows.Controls.TextBox txtInventoryNumber;
         
         #line default
         #line hidden
@@ -107,7 +83,23 @@ namespace WpfApplication1 {
         
         #line 27 "..\..\EnterInvoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label Prod_TotCost_LBL;
+        internal System.Windows.Controls.TextBox txtQuantity;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 28 "..\..\EnterInvoice.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnAddItem;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 29 "..\..\EnterInvoice.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnReset;
         
         #line default
         #line hidden
@@ -115,15 +107,7 @@ namespace WpfApplication1 {
         
         #line 30 "..\..\EnterInvoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ListBox Prod_Number;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 31 "..\..\EnterInvoice.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ListBox Prod_Name;
+        internal System.Windows.Controls.Button btnSave;
         
         #line default
         #line hidden
@@ -131,23 +115,23 @@ namespace WpfApplication1 {
         
         #line 32 "..\..\EnterInvoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ListBox Prod_Qty;
+        internal System.Windows.Controls.DataGrid invoiceGrid;
         
         #line default
         #line hidden
         
         
-        #line 33 "..\..\EnterInvoice.xaml"
+        #line 35 "..\..\EnterInvoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ListBox Prod_UnitCost;
+        internal System.Windows.Controls.ComboBox cmbCustomer_ID;
         
         #line default
         #line hidden
         
         
-        #line 34 "..\..\EnterInvoice.xaml"
+        #line 36 "..\..\EnterInvoice.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ListBox Prod_CostTotal;
+        internal System.Windows.Controls.Button btnUndo;
         
         #line default
         #line hidden
@@ -195,34 +179,52 @@ namespace WpfApplication1 {
             this.InvoiceNumber = ((System.Windows.Controls.TextBox)(target));
             return;
             case 5:
-            this.Prod_Num_LBL = ((System.Windows.Controls.Label)(target));
+            this.txtInventoryNumber = ((System.Windows.Controls.TextBox)(target));
             return;
             case 6:
-            this.Prod_Desc_LBL = ((System.Windows.Controls.Label)(target));
+            this.txtQuantity = ((System.Windows.Controls.TextBox)(target));
             return;
             case 7:
-            this.Prod_Qty_LBL = ((System.Windows.Controls.Label)(target));
+            this.btnAddItem = ((System.Windows.Controls.Button)(target));
+            
+            #line 28 "..\..\EnterInvoice.xaml"
+            this.btnAddItem.Click += new System.Windows.RoutedEventHandler(this.btnAddItem_Click);
+            
+            #line default
+            #line hidden
             return;
             case 8:
-            this.Prod_Cost_LBL = ((System.Windows.Controls.Label)(target));
+            this.btnReset = ((System.Windows.Controls.Button)(target));
+            
+            #line 29 "..\..\EnterInvoice.xaml"
+            this.btnReset.Click += new System.Windows.RoutedEventHandler(this.btnReset_Click);
+            
+            #line default
+            #line hidden
             return;
             case 9:
-            this.Prod_TotCost_LBL = ((System.Windows.Controls.Label)(target));
+            this.btnSave = ((System.Windows.Controls.Button)(target));
             return;
             case 10:
-            this.Prod_Number = ((System.Windows.Controls.ListBox)(target));
+            this.invoiceGrid = ((System.Windows.Controls.DataGrid)(target));
             return;
             case 11:
-            this.Prod_Name = ((System.Windows.Controls.ListBox)(target));
+            this.cmbCustomer_ID = ((System.Windows.Controls.ComboBox)(target));
+            
+            #line 35 "..\..\EnterInvoice.xaml"
+            this.cmbCustomer_ID.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.Customer_ID_SelectionChanged);
+            
+            #line default
+            #line hidden
             return;
             case 12:
-            this.Prod_Qty = ((System.Windows.Controls.ListBox)(target));
-            return;
-            case 13:
-            this.Prod_UnitCost = ((System.Windows.Controls.ListBox)(target));
-            return;
-            case 14:
-            this.Prod_CostTotal = ((System.Windows.Controls.ListBox)(target));
+            this.btnUndo = ((System.Windows.Controls.Button)(target));
+            
+            #line 36 "..\..\EnterInvoice.xaml"
+            this.btnUndo.Click += new System.Windows.RoutedEventHandler(this.btnUndo_Click);
+            
+            #line default
+            #line hidden
             return;
             }
             this._contentLoaded = true;
