@@ -1,0 +1,25 @@
+﻿<Page x:Class="WpfApplication1.Summary_Report"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Summary_Report" Height="540" Width="630">
+
+    <Grid Background="Gray">
+        <RadioButton x:Name="Order_Date_Range" Content="Order Date Range" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" GroupName="Summary" Checked="Order_Date_Range_Checked"/>
+        <RadioButton x:Name="Customer_Style" Content="Customer Name" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" GroupName="Summary" Checked="Customer_Style_Checked"/>
+        <DataGrid x:Name="Summary_Grid" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="333" Width="610" IsReadOnly="True"/>
+        <ComboBox x:Name="From_Date" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="From:" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="To:" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Till_Date" HorizontalAlignment="Left" Margin="50,56,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="Customer_Combo" HorizontalAlignment="Left" Margin="195,30,0,0" VerticalAlignment="Top" Width="120" />
+        <Button x:Name="Submit_Btn" Content="Submit" HorizontalAlignment="Left" Margin="500,30,0,0" VerticalAlignment="Top" Width="75" Height="40" Click="Submit_Btn_Click"/>
+        <TextBox x:Name="Grand_Total_Box" HorizontalAlignment="Left" Height="41" Margin="418,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly ="True"/>
+        <Label Content="Grand Total:" HorizontalAlignment="Left" Margin="340,438,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

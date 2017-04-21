@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    /// <summary>
-    /// Interaction logic for MainMenu.xaml
-    /// </summary>
+    
     public partial class MainMenu : Window
     {
         public MainMenu()
@@ -32,16 +30,15 @@ namespace WpfApplication1
 
         private void GetInvoice_Button_Click(object sender, RoutedEventArgs e)
         {
-            Retrieve_Invoice GetInvoice = new Retrieve_Invoice();
-            ShowBox.Navigate(GetInvoice);
-            int[] Getting_Data = WpfApplication1.ServerConnect.Find_Invoice_Data();
-            if (Getting_Data != null)
-            {
-                for (int x = 0; x <= Getting_Data.Length -1; x++)
-                {
-                    GetInvoice.ComboBox_Invoice.Items.Add(Getting_Data[x]);
-                }
+         Retrieve_Invoice GetInvoice = new Retrieve_Invoice();
+         ShowBox.Navigate(GetInvoice);
+        
             }
-            }
+
+        private void Summary_Click(object sender, RoutedEventArgs e)
+        {
+            Summary_Report Get_Summary = new Summary_Report();
+            ShowBox.Navigate(Get_Summary);
+        }
     }
 }
