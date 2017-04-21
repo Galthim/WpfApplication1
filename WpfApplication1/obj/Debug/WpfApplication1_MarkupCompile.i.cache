@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Luke\Source\Repos\WpfApplication1\WpfApplication1\obj\Debug\
+C:\Users\spide\Documents\GitHub\WpfApplication1\WpfApplication1\obj\Debug\
 WpfApplication1
 none
 false
 DEBUG;TRACE
-C:\Users\Luke\Source\Repos\WpfApplication1\WpfApplication1\App.xaml
-4944511448
+C:\Users\spide\Documents\GitHub\WpfApplication1\WpfApplication1\App.xaml
+5697413414
 
-14908369851
+15-1848440083
 16-1880411717
-MainMenu.xaml;MainWindow.xaml;Retrieve_Invoice.xaml;EnterInvoice.xaml;
+MainMenu.xaml;MainWindow.xaml;Retrieve_Invoice.xaml;EnterInvoice.xaml;Summary Report.xaml;
 
-False
+True
 

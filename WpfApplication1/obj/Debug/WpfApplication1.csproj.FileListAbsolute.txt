@@ -36,3 +36,5 @@ C:\Users\spide\Documents\GitHub\WpfApplication1\WpfApplication1\bin\Debug\Retrie
 C:\Users\Luke\Source\Repos\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe.config
 C:\Users\Luke\Source\Repos\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.exe
 C:\Users\Luke\Source\Repos\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.pdb
+C:\Users\spide\Documents\GitHub\WpfApplication1\WpfApplication1\obj\Debug\Summary Report.g.cs
+C:\Users\spide\Documents\GitHub\WpfApplication1\WpfApplication1\obj\Debug\Summary Report.baml

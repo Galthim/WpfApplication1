@@ -172,7 +172,7 @@ namespace WpfApplication1
                                     }
                                 }
                             }
-                            Products.SetBinding(ItemsControl.ItemsSourceProperty, new System.Windows.Data.Binding { Source = ProductWindow });
+                            Products.SetBinding(ItemsControl.ItemsSourceProperty, new Binding { Source = ProductWindow });
                         }
                     }
                 }
