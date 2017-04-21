@@ -183,7 +183,7 @@ namespace WpfApplication1
                     if (Till_Date.SelectedItem.ToString().Equals(OrderNum[x, 2]))
                     {
                         TillDate = x;
-                    }
+                    }       
                 }
 
                 decimal Grand_Total = 0;
