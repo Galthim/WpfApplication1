@@ -6,10 +6,10 @@
         <Label Content="Retrieve Invoice" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="220,3,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.192" Width="187" FontWeight="Bold" FontSize="22"/>
         <StackPanel Height="488" Margin="10,42,10,0" VerticalAlignment="Top">
             <Grid Margin="0,0,10,0">
-                <TextBox x:Name="Customer_Name" Height="23" TextWrapping="Wrap" Margin="129,0,230,0" IsEnabled="False"/>
-                <Label Content="Customer Name:" Margin="28,0,-28,0"/>
-                <TextBox x:Name="Order_date" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="41" Margin="486,0,0,-18" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" IsEnabled="False"/>
-                <Label Content="Order Date:" Margin="408,7,114,-7"/>
+                <TextBox x:Name="Customer_Name" Height="23" TextWrapping="Wrap" Margin="10,10,349,-8" IsEnabled="False"/>
+                <Label Content="Customer Name:" Margin="10,-10,468,10"/>
+                <TextBox x:Name="Order_date" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="41" Margin="486,16,0,-31" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" IsEnabled="False"/>
+                <Label Content="Order Date:" Margin="486,-10,36,10"/>
             </Grid>
             <Grid Margin="0,0,10,0">
                 <Grid.ColumnDefinitions>
@@ -21,14 +21,14 @@
                     <ColumnDefinition Width="19*"/>
                     <ColumnDefinition Width="38*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="Customer_Address_Street" TextWrapping="Wrap" Margin="39,0,18,-29" IsEnabled="False" Grid.ColumnSpan="2" Grid.Column="2"/>
-                <Label Content="Shipping Address:" Grid.ColumnSpan="3" Margin="25,11,130,-11"/>
-                <ComboBox x:Name="ComboBox_Invoice" SelectionChanged="ComboBox_Invoice_SelectionChanged" HorizontalAlignment="Left" Height="25" Margin="57,27,0,-29" VerticalAlignment="Top" Width="116" Grid.ColumnSpan="3" Grid.Column="4" ToolTip="Please select a date to review" />
-                <Label Content="Order Date:" Margin="101,29,69,-29" Grid.ColumnSpan="2" Grid.Column="3"/>
+                <TextBox x:Name="Customer_Address_Street" TextWrapping="Wrap" Margin="10,34,145,-91" IsEnabled="False" Grid.ColumnSpan="3"/>
+                <Label Content="Shipping Address:" Grid.ColumnSpan="3" Margin="10,8,145,-8"/>
+                <ComboBox x:Name="ComboBox_Invoice" SelectionChanged="ComboBox_Invoice_SelectionChanged" HorizontalAlignment="Left" Height="25" Margin="62,64,0,-63" VerticalAlignment="Top" Width="116" Grid.ColumnSpan="3" Grid.Column="4" ToolTip="Please select a date to review" />
+                <Label Content="Order Number:" Margin="62,38,14,-38" Grid.ColumnSpan="3" Grid.Column="4"/>
             </Grid>
             <Grid Margin="10,50,10,0">
 
-                <DataGrid x:Name="Products" Height="306" IsReadOnly="True" />
+                <DataGrid x:Name="Products" Height="306" IsReadOnly="True" Margin="0,50,0,-50" />
             </Grid>
 
 

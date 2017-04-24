@@ -23,17 +23,12 @@ namespace WpfApplication1
         {
             try
             {
-                //SqlDataReader myReader = null;
+               
                 SqlConnection Northwind = new SqlConnection("Server =Localhost;" + "Database =northwind;" + "trusted_Connection = true;" + "User ID = " + userName + ", " + "Password= " + password + ";");
                 Northwind.Open();
-                // SqlCommand myCommand = new SqlCommand("USE northwind SELECT ContactName, ContactTitle, Phone FROM Customers", Northwind);
-                //myReader = myCommand.ExecuteReader();
-                //+"Trusted_Connection = false;"
+              
                 MessageBox.Show("The connection was successful");
-                // while (myReader.Read())
-                // {
-                //     MessageBox.Show(myReader["ContactName"].ToString());
-                // }
+             
                 return true;
             }
             catch (Exception e2)

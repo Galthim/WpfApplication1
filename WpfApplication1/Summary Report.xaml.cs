@@ -183,37 +183,45 @@ namespace WpfApplication1
                     if (Till_Date.SelectedItem.ToString().Equals(OrderNum[x, 2]))
                     {
                         TillDate = x;
-                    }       
+                    }
                 }
 
-                decimal Grand_Total = 0;
-                DataTable SummaryWindow = new DataTable();
-                SummaryWindow.Columns.Add("Order Number");
-                SummaryWindow.Columns.Add("Customer Name");
-                SummaryWindow.Columns.Add("Order Date");
-                SummaryWindow.Columns.Add("Subtotal");
-
-                for (int x = FromDate; x <= TillDate; x++) //Looks at only the dates specified
+                if (TillDate > FromDate)
                 {
-                    DataRow SummaryRow = SummaryWindow.NewRow();
+                    decimal Grand_Total = 0;
+                    DataTable SummaryWindow = new DataTable();
+                    SummaryWindow.Columns.Add("Order Number");
+                    SummaryWindow.Columns.Add("Customer Name");
+                    SummaryWindow.Columns.Add("Order Date");
+                    SummaryWindow.Columns.Add("Subtotal");
+
+                    for (int x = FromDate; x <= TillDate; x++) //Looks at only the dates specified
+                    {
+                        DataRow SummaryRow = SummaryWindow.NewRow();
 
 
-                    for (int y = 0; y < OrderNum.GetLength(0); y++) //finds the Customer name
-                        if (OrderNum[x, 1].Equals(CustInfo[y, 0]))
-                        {
-                            SummaryRow["Order Number"] = OrderNum[x, 0];
-                            SummaryRow["Customer Name"] = CustInfo[y, 1];
-                            SummaryRow["Order Date"] = OrderNum[x, 2];
-                            SummaryRow["Subtotal"] = OrderNum[x, 3];
-                            SummaryWindow.Rows.Add(SummaryRow);
-                            Grand_Total = Grand_Total + Decimal.Parse(OrderNum[x, 3]);
-                        }
+                        for (int y = 0; y < OrderNum.GetLength(0); y++) //finds the Customer name
+                            if (OrderNum[x, 1].Equals(CustInfo[y, 0]))
+                            {
+                               
+                                String.Format("{0:C2}", OrderNum[x, 3].ToString());
+                                SummaryRow["Order Number"] = OrderNum[x, 0];
+                                SummaryRow["Customer Name"] = CustInfo[y, 1];
+                                SummaryRow["Order Date"] = OrderNum[x, 2];
+                                SummaryRow["Subtotal"] = OrderNum[x, 3];
+                                SummaryWindow.Rows.Add(SummaryRow);
+                                Grand_Total = Grand_Total + decimal.Parse(OrderNum[x, 3]);
+                            }
 
+                    }
+                    Grand_Total_Box.Text = String.Empty + Grand_Total;
+                    Summary_Grid.SetBinding(ItemsControl.ItemsSourceProperty, new Binding { Source = SummaryWindow });
                 }
-                Grand_Total_Box.Text = String.Empty + Grand_Total;
-                Summary_Grid.SetBinding(ItemsControl.ItemsSourceProperty, new Binding { Source = SummaryWindow });
+                else
+                {
+                    MessageBox.Show("Warning! From Date should be earlier than To Date!");
+                }
             }
-        
                
             if (Customer_Style.IsChecked == true)
             {
@@ -264,6 +272,7 @@ namespace WpfApplication1
                 while (DataGetter.Read())
                 {
                     //Order Subtotal
+
                     OrderNum[axe, 3] = string.Empty + DataGetter.GetDecimal(1);
 
 

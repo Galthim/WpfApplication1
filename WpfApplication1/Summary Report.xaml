@@ -9,6 +9,7 @@
       Title="Summary_Report" Height="540" Width="630">
 
     <Grid Background="Gray">
+        <!-- This block of text is useless except to change this so that I can actually upload to Github again -->
         <RadioButton x:Name="Order_Date_Range" Content="Order Date Range" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" GroupName="Summary" Checked="Order_Date_Range_Checked"/>
         <RadioButton x:Name="Customer_Style" Content="Customer Name" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" GroupName="Summary" Checked="Customer_Style_Checked"/>
         <DataGrid x:Name="Summary_Grid" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="333" Width="610" IsReadOnly="True"/>
